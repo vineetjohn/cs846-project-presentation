@@ -44,7 +44,7 @@
 
 	\begin{columns}[T] % align columns
 		\begin{column}{.45\textwidth}
-			\includegraphics[width=.9\textwidth]{images/TylerEmerick_status_879743676385079296.png}
+			\includegraphics[width=.9\textwidth]{images/twitter-status.png}
 		\end{column}
 		\hfill
 		\begin{column}{.45\textwidth}
@@ -79,5 +79,54 @@
 	\vspace{1cm}
 	{\Large Build a semi-supervised framework that leverages \textbf{labeled data sources} to build a \textbf{online query service} for unstructured data from the \textbf{same distribution}}
 \end{frame}
+
+\section{Background}
+
+\begin{frame}{Word Embeddings}
+	\centering
+	\includegraphics[width=.7\textwidth]{images/word2vec-1.png}
+\end{frame}
+
+\begin{frame}{Word Embeddings}
+	\centering
+	\includegraphics[width=.9\textwidth]{images/word2vec-2.png}
+\end{frame}
+
+\begin{frame}{Document Embeddings}
+	\centering
+	\includegraphics[width=.7\textwidth]{images/docvec.png}
+\end{frame}
+
+
+\section{Implementation}
+
+\begin{frame}{Libraries Used \& Data Sources}
+	\begin{columns}[T] % align columns
+		\begin{column}{.3\textwidth}
+			{\Large Libraries}
+			\begin{itemize}
+				\item NLTK, spaCy
+				\item Gensim
+				\item Scikit-Learn
+			\end{itemize}
+		\end{column}
+		\hfill
+		\begin{column}{.6\textwidth}
+			{\Large Data}
+			\begin{itemize}
+				\item Amazon Book Reviews
+				\item 8.9GB, approximately 8.9 million reviews
+				\item 60K randomly selected training reviews, 1K validation, 10K test
+			\end{itemize}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Architecture}
+	\centering
+	\includegraphics[width=.9\textwidth]{images/rapid-rate-system-arch.png}
+\end{frame}
+
+
 
 \end{document}
