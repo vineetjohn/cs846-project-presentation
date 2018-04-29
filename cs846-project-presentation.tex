@@ -3,6 +3,7 @@
 \usepackage{amsmath}
 \usepackage{algorithm}
 \usepackage{algorithmic}
+\usepackage{xcolor}
 
 \definecolor{usccardinal}{rgb}{0.6, 0.0, 0.0}
 \definecolor{tropicalrainforest}{rgb}{0.0, 0.46, 0.37}
@@ -100,7 +101,7 @@
 
 \section{Implementation}
 
-\begin{frame}{Libraries Used \& Data Sources}
+\begin{frame}{Packages Used \& Data Sources}
 	\begin{columns}[T] % align columns
 		\begin{column}{.3\textwidth}
 			{\Large Libraries}
@@ -142,9 +143,37 @@
 
 \begin{frame}{Visualization Dashboard}
 	\centering
-	\includegraphics[width=.8\textwidth]{images/bosun-dash.png}
+	\includegraphics[width=.7\textwidth]{images/bosun-dash.png}
 \end{frame}
 
+\begin{frame}{Commentary}
+	\begin{columns}[T] % align columns
+		\begin{column}{.48\textwidth}
+			\color{tropicalrainforest}\rule{\linewidth}{4pt}
+			\begin{itemize}
+				\item No manual feature engineering or data cleaning needed
+				\item Real-time dashboard is as easy to setup as a web-server
+				\item Loosely-coupled architecture allows the individual components (Learning Model, Spark Streaming Processor, Time Series viz.) to be used independently of each other.
+			\end{itemize}
+		\end{column}
+		\hfill
+		\begin{column}{.48\textwidth}
+			\color{usccardinal}\rule{\linewidth}{4pt}
+			\begin{itemize}
+				\item Quality of the results are low because of the inherent differences between the way reviewers express their opinion on a site like Yelp and Twitter.
+				\item $R^2$ isn't intuitively helpful in determining how good the model is. RMSE might be a better option.
+			\end{itemize}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{References}
+	\begin{itemize}
+		\item Mikolov, Tomas, et al. "Efficient estimation of word representations in vector space." arXiv preprint arXiv:1301.3781 (2013). \footnote{https://www.tensorflow.org/tutorials/word2vec}
+		\item Mikolov, Tomas, et al. "Distributed representations of words and phrases and their compositionality." Advances in neural information processing systems. 2013.
+		\item Le, Quoc, and Tomas Mikolov. "Distributed representations of sentences and documents." International Conference on Machine Learning. 2014.
+	\end{itemize}
+\end{frame}
 
 \begin{frame}
 	\centering
